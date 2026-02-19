@@ -7,7 +7,7 @@ const {PlaceorderPage} = require('../page-objects/PlaceorderPage');
 const {OrderconfirmationPage} = require('../page-objects/OrderconfirmationPage');
 const {OrdersPage} = require('../page-objects/OrdersPage');
 const { json } = require('node:stream/consumers');
-const testData = JSON.parse(JSON.stringify(require('../utils/RSPractice1TestData.json')));
+const testData = JSON.parse(JSON.stringify(require('../utils/ecommerceTestData.json')));
 
 test('Register User', async({page}) =>
 {
