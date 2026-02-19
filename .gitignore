@@ -1,0 +1,12 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+tests/calendar.spec.js
+tests/example.spec.js
+tests/specialLocators.spec.js
+tests/UIBasic.spec.js
