@@ -22,7 +22,7 @@ export class PlaceorderPage
         const countryOptionsCount = await this.countryOptions.count();
         for(let i=0; i<countryOptionsCount; i++)
         {
-           if(await this.countryOptions.nth(i).textContent() === country)
+           if((await this.countryOptions.nth(i).textContent()).trim() === country)
            {
             await this.countryOptions.nth(i).click();
             break;
