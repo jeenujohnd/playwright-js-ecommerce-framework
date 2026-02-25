@@ -9,4 +9,4 @@ node_modules/
 tests/calendar.spec.js
 tests/example.spec.js
 tests/specialLocators.spec.js
-tests/UIBasic.spec.js
+tests/UIBasicsTest.spec.js
