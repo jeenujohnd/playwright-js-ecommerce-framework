@@ -10,3 +10,4 @@ tests/calendar.spec.js
 tests/example.spec.js
 tests/specialLocators.spec.js
 tests/UIBasicsTest.spec.js
+tests/moreValidations.spec.js
