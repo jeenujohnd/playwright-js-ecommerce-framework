@@ -11,3 +11,4 @@ tests/example.spec.js
 tests/specialLocators.spec.js
 tests/UIBasicsTest.spec.js
 tests/moreValidations.spec.js
+tests/WebAPIPart1.spec.js
