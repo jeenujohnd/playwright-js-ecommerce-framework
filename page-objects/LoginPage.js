@@ -6,11 +6,12 @@ export class LoginPage
         this.username = page.locator("#userEmail");
         this.password = page.locator("#userPassword");
         this.loginButton = page.locator("#login");
+        this.loginSuccessText = page.getByLabel("Login Successfully");
     }
 
     async goto()
     {
-        this.page.goto("https://rahulshettyacademy.com/client/#/auth/login");
+        await this.page.goto("/client");
     }
 
     async login(username, password)
@@ -20,5 +21,12 @@ export class LoginPage
         await this.loginButton.click();
         await this.page.waitForLoadState('networkidle');
     }
+
+    getLoginSuccessMessage()
+    {
+        return this.loginSuccessText;
+    }
+
+
 }
 

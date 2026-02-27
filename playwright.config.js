@@ -9,6 +9,7 @@ export default defineConfig({
   },
   reporter: 'html',
   use: {
+    baseURL: 'https://rahulshettyacademy.com',
     browserName: 'chromium',
     headless: false,
     screenshot: 'only-on-failure',

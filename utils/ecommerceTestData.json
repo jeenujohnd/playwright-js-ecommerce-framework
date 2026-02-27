@@ -3,5 +3,8 @@
     "username": "kitty@gmail.com",
     "password": "Kitty@1234",
     "typeCountry": "Uni",
-    "country": "United States"
-}
+    "country": "United States",
+    "firstName": "Kitty",
+    "lastName": "Cat",
+    "mobile": "9876543210"
+} 

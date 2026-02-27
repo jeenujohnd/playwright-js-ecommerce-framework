@@ -6,9 +6,3 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-tests/calendar.spec.js
-tests/example.spec.js
-tests/specialLocators.spec.js
-tests/UIBasicsTest.spec.js
-tests/moreValidations.spec.js
-tests/WebAPIPart1.spec.js
