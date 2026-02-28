@@ -6,7 +6,7 @@ export class LoginPage
         this.username = page.locator("#userEmail");
         this.password = page.locator("#userPassword");
         this.loginButton = page.locator("#login");
-        this.loginSuccessText = page.getByLabel("Login Successfully");
+        this.loginSuccessText = page.getByText("Login Successfully");
     }
 
     async goto()
@@ -19,14 +19,7 @@ export class LoginPage
         await this.username.fill(username);
         await this.password.fill(password);
         await this.loginButton.click();
-        await this.page.waitForLoadState('networkidle');
-    }
-
-    getLoginSuccessMessage()
-    {
         return this.loginSuccessText;
     }
 
-
 }
-

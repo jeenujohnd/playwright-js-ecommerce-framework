@@ -23,9 +23,9 @@ test.describe('Authentications Tests', () =>
         });
 
     test('Login User', async({page}) =>
-        {
-            await loginPage.login(testData.username, testData.password);
-            await expect(loginPage.getLoginSuccessMessage()).toBeVisible();
+        {         
+            const loginSuccessMessage = await loginPage.login(testData.username, testData.password);
+            await expect(loginSuccessMessage).toBeVisible();
         });
     
     });

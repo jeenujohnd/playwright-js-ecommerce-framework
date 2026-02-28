@@ -11,7 +11,7 @@ export default defineConfig({
   use: {
     baseURL: 'https://rahulshettyacademy.com',
     browserName: 'chromium',
-    headless: false,
+    headless: process.env.CI ? true : false,
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
   },
