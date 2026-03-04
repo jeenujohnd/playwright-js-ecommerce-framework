@@ -7,6 +7,9 @@ export class LoginPage
         this.password = page.locator("#userPassword");
         this.loginButton = page.locator("#login");
         this.loginSuccessText = page.getByText("Login Successfully");
+        this.loginErrorText = page.getByText("Incorrect email or password.");
+        this.logoutButton = page.locator(".fa-sign-out");
+        this.logoutSuccessText = page.getByText("Logout Successfully");
     }
 
     async goto()
@@ -14,12 +17,25 @@ export class LoginPage
         await this.page.goto("/client");
     }
 
-    async login(username, password)
+    async validLogin(username, password)
     {        
         await this.username.fill(username);
         await this.password.fill(password);
         await this.loginButton.click();
-        return this.loginSuccessText;
+        return await this.loginSuccessText;
     }
 
+    async invalidLogin(username, password)
+    {
+        await this.username.fill(username);
+        await this.password.fill(password);
+        await this.loginButton.click();
+        return await this.loginErrorText;
+    }
+
+    async logout()
+    {
+        await this.logoutButton.click();
+        return this.logoutSuccessText;
+    }
 }

@@ -22,10 +22,18 @@ test.describe('Authentications Tests', () =>
             await registerPage.clickLoginLink();
         });
 
-    test('Login User', async({page}) =>
+    test('Valid Login User and logout', async() =>
         {         
-            const loginSuccessMessage = await loginPage.login(testData.username, testData.password);
+            const loginSuccessMessage = await loginPage.validLogin(testData.username, testData.password);
             await expect(loginSuccessMessage).toBeVisible();
+            const logoutSuccessMessage = await loginPage.logout();
+            await expect(logoutSuccessMessage).toBeVisible();        
+        });
+    
+    test('Invalid Login User',async()=>
+        {
+            const loginErrorMessage = await loginPage.invalidLogin(testData.invalidUsername, testData.invalidPassword);
+            await expect(loginErrorMessage).toBeVisible();
         });
     
     });
