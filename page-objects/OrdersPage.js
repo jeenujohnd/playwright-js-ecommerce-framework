@@ -24,7 +24,7 @@ export class OrdersPage
             {               
                 await this.viewButton.nth(i).click();                
                 await this.orderIDInOrderSummary.waitFor();
-                console.log("order ID on order summary pae:" +await this.orderIDInOrderSummary.textContent());           
+                console.log("order ID on order summary page:" +await this.orderIDInOrderSummary.textContent());           
                 return (await this.orderIDInOrderSummary.textContent()).replace(/[|\s]/g, "");            
             }
         }        
