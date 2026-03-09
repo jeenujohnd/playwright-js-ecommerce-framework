@@ -41,7 +41,7 @@ test.only('Login User', async({page}) =>
 {
     const loginPage = new LoginPage(page);
     await loginPage.goto();
-    await loginPage.login(testData.username, testData.password);    
+    await loginPage.validLogin(testData.username, testData.password);    
     
     const productName = testData.productName;   
     
