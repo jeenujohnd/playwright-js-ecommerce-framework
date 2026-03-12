@@ -6,6 +6,8 @@ export class CartPage
         this.itemAdded= page.locator(`h3:has-text("${productName}")`);
         this.cartItemsList = page.locator("div li");
         this.checkoutButton = page.locator(".subtotal .btn-primary");
+        this.cartItems = page.locator(".cartWrap");
+        this.removeProductButton = page.locator(".fa-trash-o");
     }
 
     async verifyItemAddedToCart()
@@ -18,5 +20,13 @@ export class CartPage
     async clickCheckoutButton()
     {
         await this.checkoutButton.click();
+    }
+
+    async removeProductFromCart()
+    {
+        await this.cartItems
+                  .filter({has : this.itemAdded})
+                  .locator(this.removeProductButton)
+                  .click();
     }
 }

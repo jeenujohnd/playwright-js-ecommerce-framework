@@ -16,13 +16,13 @@ This project automates the [Rahul Shetty Academy] e-commerce site. It simulates 
 * Robustness: Utilizes Playwright’s auto-waiting and custom assertions to reduce flakiness.
 
 🛠️ Tech Stack
-* #Testing Framework: Playwright Test
+* Testing Framework: Playwright Test
 
-* #Language: JavaScript (Node.js)
+* Language: JavaScript (Node.js)
 
-* #Design Pattern: Page Object Model (POM)
+* Design Pattern: Page Object Model (POM)
   
-* #Reporting: Playwright HTML Reporter
+* Reporting: Playwright HTML Reporter
 
 📋 Prerequisites
 Before running the tests, ensure you have the following installed:

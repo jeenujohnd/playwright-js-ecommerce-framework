@@ -2,7 +2,7 @@ const {test,expect} = require ('@playwright/test');
 const {LoginPage} = require('../page-objects/LoginPage');
 const {DashboardPage} = require('../page-objects/DashboardPage');
 const testData = require('../utils/ecommerceTestData.json');
-const productName = testData.productName;
+const { CartPage } = require('../page-objects/CartPage');
 let dashboardPage;
 
 test.describe('Products view  and add to cart tests', () =>
@@ -21,9 +21,12 @@ test.describe('Products view  and add to cart tests', () =>
         await dashboardPage.continueShopping();
     });
 
-    test('Search and add product to cart', async({page})=>
+    test('Search, add product to cart and remove', async({page})=>
     {
         await dashboardPage.searchAndaddProductToCart(testData.productName);
         await dashboardPage.navigateToCart();
+        const cartPage = new CartPage(page, testData.productName);
+        await cartPage.removeProductFromCart();
     });
+    
 });
