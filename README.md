@@ -1,6 +1,6 @@
 # 🎭 Playwright Automation Project
 
-This project automates the [Rahul Shetty Academy] e-commerce site. It simulates a real-world e-commerce flow, including user authentication, product searching, cart management, and order placement.
+This project automates the (https://rahulshettyacademy.com/client) e-commerce site. It simulates a real-world e-commerce flow, including user authentication, product searching, cart management, and order placement.
 
 [Target URL]: (https://rahulshettyacademy.com/client/)
 
